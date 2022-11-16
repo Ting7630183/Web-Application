@@ -1,0 +1,64 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <div>
+        <span>
+            <div id='id_nav_profile'>
+                <a href="{% url 'my_profile' %}"> 
+                    <button>{{user.first_name}} {{user.last_name}}</button>
+                </a>
+            </div>
+            <span>
+                <div id='id_nav_global_stream'>
+                    <a href="{% url 'global_stream'%}">
+                        <button>Global</button>
+                    </a>
+                </div>
+
+                <div id='id_nav_follower_stream'>
+                    <a href="{% url 'follower_stream'%}">
+                        <button>Follower</button>
+                    </a>
+                </div>
+
+               <div id='id_nav_logout'>
+                <a href="{% url 'logout'%}">
+                    <button>Logout</button>
+                </a>
+               </div>
+                            
+            </span>
+        </span>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div>
+    <p id="id_page_name">Follower Stream</p>
+
+        <div>
+            <div id="id_post_div_1">
+                <a id="id_post_profile_1" href="{% url 'other_profile' %}">Jeff Eppinger</a>
+                <a id="id_post_text_1">I wait in line for 15 minutes</a>
+                <a id="id_post_date_time_1">8/25/2021 2:00 PM</a>
+            </div>
+
+            <div id="id_comment_div_1">
+                <a id="id_comment_profile_1" href="{% url 'other_profile' %}">James</a>
+                <a id="id_comment_text_1">Can I have BBQ?</a>
+                <a id="id_comment_date_time_1">8/25/2021 1:00 PM</a>
+
+            </div>
+            <a>Comment:</a>
+            <input type="text" id="id_comment_input_text_1">
+            <button type="submit" id="id_comment_button_n">Submit</button>
+            <div>
+
+            </div>
+
+        </div>
+
+    </form>
+    </div>
+
+{% endblock %}

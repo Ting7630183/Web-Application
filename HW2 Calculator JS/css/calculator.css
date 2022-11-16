@@ -1,0 +1,111 @@
+#key-0, #key-1, #key-2, #key-3, #key-4, #key-5, #key-6, #key-7, #key-7, #key-8, #key-9{
+    height:50px;
+    width:50px;
+    background-color: rgb(228, 216, 225);
+    color:rgb(11, 11, 71);
+    font-size:30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    border-radius: 15px;
+    margin: 5px 0px;
+    padding: 3px;
+}
+
+#key-plus, #key-minus, #key-times, #key-divide, #key-push{
+    height:50px;
+    width:50px;
+    background-color: rgb(42, 155, 140);
+    color:rgb(11, 11, 71);
+    font-size:30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    border-radius: 15px;
+    margin: 5px 0px;
+    padding: 3px;
+}
+
+#blank{
+    visibility: hidden;
+    height:50px;
+    width:50px;
+    background-color: rgb(42, 155, 140);
+    color:rgb(11, 11, 71);
+    font-size:30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    border-radius: 15px;
+    margin: 5px 0px;
+    padding: 3px;
+}
+#output{
+    height: 60px;
+    width: 200px;
+    background-color: purple;
+    color:rgb(11, 11, 71);
+    font-size:30px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align: right;
+    margin: 10px 0px;
+    padding: 10px;  
+}
+
+#key-0:hover{
+    background-color:linen;
+}
+
+#key-1:hover{
+    background-color:linen;
+}
+
+#key-2:hover{
+    background-color:linen;
+}
+
+#key-3:hover{
+    background-color:linen;
+}
+
+#key-4:hover{
+    background-color:linen;
+}
+
+#key-5:hover{
+    background-color:linen;
+}
+
+#key-6:hover{
+    background-color:linen;
+}
+
+#key-7:hover{
+    background-color:linen;
+}
+
+#key-8:hover{
+    background-color:linen;
+}
+
+#key-9:hover{
+    background-color:linen;
+}
+
+#key-plus:hover{
+    background-color:linen;
+}
+
+#key-minus:hover{
+    background-color:linen;
+}
+
+#key-times:hover{
+    background-color:linen;
+}
+
+#key-divide:hover{
+    background-color:linen;
+}
+
+#key-push:hover{
+    background-color:linen;
+}

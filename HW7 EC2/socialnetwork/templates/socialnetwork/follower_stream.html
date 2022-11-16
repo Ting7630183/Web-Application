@@ -1,0 +1,53 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <nav>
+        <ul>
+           <li><div id='id_nav_profile'>
+                <a href="{% url 'my_profile' %}"> 
+                    <button>{{user.first_name}} {{user.last_name}}</button>
+                </a>
+            </div>
+            </li>
+
+            <li>
+                <div id='id_nav_global_stream'>
+                    <a href="{% url 'global_stream'%}">
+                        <button>Global</button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+
+                <div id='id_nav_follower_stream'>
+                    <a href="{% url 'follower_stream'%}">
+                        <button>Follower</button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+               <div id='id_nav_logout'>
+                <a href="{% url 'logout'%}">
+                    <button>Logout</button>
+                </a>
+               </div>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+<div>
+    <p id="id_page_name">Follower Stream</p>
+    <div id="post"></div>
+
+    <script>
+        window.onload = getFollower;
+        window.setInterval(getFollower, 5000);
+    </script>
+
+</div>
+
+{% endblock %}

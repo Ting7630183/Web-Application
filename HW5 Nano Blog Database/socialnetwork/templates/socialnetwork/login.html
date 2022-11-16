@@ -1,0 +1,26 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block block-title %}
+<title> Login Page </title>
+{% endblock %}
+
+{% block user-info %}
+    <div>
+        <a id ='id_register_link' href="{% url 'register' %}">
+            <button>Register</button>
+        </a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <p id ='id_page_name'>Login:</p>
+
+    <form method="post" action="{% url 'login' %}">
+        <table>
+            {{form}}
+        </table>
+        {% csrf_token %}
+        <button type="submit" id = 'id_login_button'>Submit</button>
+    </form>
+
+{% endblock %}

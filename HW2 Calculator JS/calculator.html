@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href='./css/calculator.css' rel='stylesheet'>
+    <script src = "./js/calculator.js"></script>
+</head>
+
+<body>
+<div id = "output"> 0 </div>
+<div class = "buttons">
+    <tr>
+        <button id = "key-7" onclick = "number(7)"> 7 </button>
+        <button id = "key-8" onclick = "number(8)"> 8 </button>
+        <button id = "key-9" onclick = "number(9)"> 9 </button>
+        <button id = "key-plus" onclick = "ops(1)"> &plus; </button>
+    </tr>
+    <br/>
+
+    <tr>
+        <button id = "key-4" onclick = "number(4)"> 4 </button>
+        <button id = "key-5" onclick = "number(5)"> 5 </button>
+        <button id = "key-6" onclick = "number(6)"> 6 </button>
+        <button id = "key-minus" onclick = "ops(2)"> &minus; </button>
+    </tr>
+    <br/>
+
+    <tr>
+        <button id = "key-1" onclick = "number(1)"> 1 </button>
+        <button id = "key-2" onclick = "number(2)"> 2 </button>
+        <button id = "key-3" onclick = "number(3)"> 3 </button>
+        <button id = "key-times" onclick = "ops(3)"> &times; </button>
+    </tr>
+    <br/>
+
+    <tr>
+        <button id = "blank"></button>
+        <button id = "key-0" onclick = "number(0)"> 0 </button>
+        <button id = "key-push" onclick = "push()"> &uarr;</button>
+        <button id = 'key-divide' onclick = "ops(4)"> &divide; </button>
+    </tr>
+    <br/>   
+</div>
+<div>
+
+</div>
+</body>
+</html>

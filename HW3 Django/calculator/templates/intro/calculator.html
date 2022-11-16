@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href='./static/intro/calculator.css' type="text/css" rel='stylesheet'>
+</head>
+
+<body>
+    <div id="output" {% if correct %} style="background-color: lightblue;"
+                     {% else %} class="correct"  style="background-color: lightgreen;" 
+                     {% endif %}>
+                     {{output}}
+    </div> 
+
+
+<form method = "POST" action = "/">
+    <tr>
+        <button id = "key-7" name = "button" value = "7"> 7 </button>
+        <button id = "key-8" name = "button" value = "8"> 8 </button>
+        <button id = "key-9" name = "button" value = "9"> 9 </button>
+        <button id = "key-plus" name = "button" value = "plus"> &plus; </button>
+    </tr>
+    <br/>
+
+    <tr>
+        <button id = "key-4" name = "button" value = "4"> 4 </button>
+        <button id = "key-5" name = "button" value = "5"> 5 </button>
+        <button id = "key-6" name = "button" value = "6"> 6 </button>
+        <button id = "key-minus" name = "button" value = "minus"> &minus; </button>
+    </tr>
+    <br/>
+
+    <tr>
+        <button id = "key-1" name = "button" value = "1"> 1 </button>
+        <button id = "key-2" name = "button" value = "2"> 2 </button>
+        <button id = "key-3" name = "button" value = "3"> 3 </button>
+        <button id = "key-times" name = "button" value = "times"> &times; </button>
+    </tr>
+    <br/>
+
+    <tr>
+        <button id = "blank"></button>
+        <button id = "key-0" name = "button" value = "0"> 0 </button>
+        <button id = "key-push" name = "button" value = "push"> &uarr;</button>
+        <button id = 'key-divide' name = "button" value = "divide"> &divide; </button>
+    </tr>
+    <br/>  
+    <input type = "hidden" name="top" value="{{top}}">
+    <input type = "hidden" name="middle" value="{{middle}}">
+    <input type = "hidden" name="bottom" value="{{bottom}}">
+    <input type = "hidden" name="entering" value="{{entering}}">
+    <input type = "hidden" name = "count" value="{{count}}">
+    {% csrf_token %}
+</form>
+</body>
+</html>

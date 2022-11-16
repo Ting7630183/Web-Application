@@ -1,0 +1,77 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <nav>
+        <ul>
+            <li>
+            <div id='id_nav_profile'>
+                <a href="{% url 'my_profile' %}"> 
+                    <button>{{user.first_name}} {{user.last_name}}</button>
+                </a>
+            </div>
+            </li>
+
+            <li>
+                <div id='id_nav_global_stream'>
+                    <a href="{% url 'global_stream'%}">
+                        <button>Global</button>
+                    </a>
+                </div>
+            </li>
+            
+            <li>
+                <div id='id_nav_follower_stream'>
+                    <a href="{% url 'follower_stream'%}">
+                        <button>Follower</button>
+                    </a>
+                </div>
+            </li>
+            
+            <li>
+               <div id='id_nav_logout'>
+                <a href="{% url 'logout'%}">
+                    <button>Logout</button>
+                </a>
+               </div>
+            </li>
+                            
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block content %}
+<div>
+    <p id="id_page_name">Global Stream</p>
+ </div> 
+
+<div>
+    <form class = "add-post" action = "{% url 'global_stream' %}" method="post">
+        <label>New Post:</label>
+        <input id="id_post_input_text" type="text" name="test" autofocus>
+        <input id="id_post_button" type="submit">
+        {% csrf_token %}
+    </form>
+</div>
+
+{% for post in form %}
+ <div id="id_post_div_{{post.id}}">
+        <a id="id_post_profile_{{post.id}}" href = "{% url 'other_profile' post.user.id %}"> Post by {{post.user.first_name}} {{post.user.last_name}}</a>
+            
+        
+        <a id="id_post_text_{{post.id}}">{{post.text}}</a>
+        <span class="details">
+           <a id="id_post_date_time_{{post.id}}">{{post.creation_time | date:"n/j/Y g:i A"}}</a> 
+        </span>
+
+</div>
+ {% endfor %}
+
+ <div id="post"></div>
+
+
+<script>
+    window.onload = getGlobal;
+    window.setInterval(getGlobal, 5000);
+</script>
+           
+{% endblock %}

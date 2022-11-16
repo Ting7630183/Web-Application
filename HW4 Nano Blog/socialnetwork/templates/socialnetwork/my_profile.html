@@ -1,0 +1,51 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block user-info %}
+    <div>
+        <span>
+            <div id='id_nav_profile'>
+                <a href="{% url 'my_profile' %}"> 
+                    <button>{{user.first_name}} {{user.last_name}}</button>
+                </a>
+            </div>
+            <span>
+                <div id='id_nav_global_stream'>
+                    <a href="{% url 'global_stream'%}">
+                        <button>Global</button>
+                    </a>
+                </div>
+
+                <div id='id_nav_follower_stream'>
+                    <a href="{% url 'follower_stream'%}">
+                        <button>Follower</button>
+                    </a>
+                </div>
+
+               <div id='id_nav_logout'>
+                <a href="{% url 'logout'%}">
+                    <button>Logout</button>
+                </a>
+               </div>
+                            
+            </span>
+        </span>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h1 id="id_page_name">Profile for {{user.first_name}} {{user.last_name}} </h1>      
+</div>
+
+
+{% load static %} 
+ <img id="id_user_picture" src= "{% static 'socialnetwork/sunshine.jpg' %}">
+        
+        <div>
+            <div contentEditable="true" id="id_bio_input_text"> Jeff is a computer professor in Carnegie Mellon University.</div>
+            <button type="submit" id="id_profile_picture">Choose profile</button>
+            <div id="id_profile_link_x" herf="{% url 'my_profile'%}">Jeff</div>
+            <button type="submit" id="id_update_profile_button">Submit</button>
+        </div>
+
+    {% endblock %}
